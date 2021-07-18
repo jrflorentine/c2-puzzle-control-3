@@ -10,10 +10,8 @@ radio.onReceivedNumber(function (receivedNumber) {
         } else if (Received == 1 && Timer < 2) {
             Input2 = RadioNum
             if (Step == 4) {
-                LCDShow()
                 NumCheck2()
             } else {
-                LCDShow()
                 NumCheck3()
             }
         } else if (Timer > 2) {
@@ -56,12 +54,6 @@ function NumCheck3 () {
         Input2 = 0
         Timer = 0
     }
-}
-function LCDShow () {
-    makerbit.showStringOnLcd1602("Input1: ", makerbit.position1602(LcdPosition1602.Pos1), 8)
-    makerbit.showStringOnLcd1602("" + (Input1), makerbit.position1602(LcdPosition1602.Pos9), 1)
-    makerbit.showStringOnLcd1602("Input2: ", makerbit.position1602(LcdPosition1602.Pos17), 8)
-    makerbit.showStringOnLcd1602("" + (Input2), makerbit.position1602(LcdPosition1602.Pos25), 1)
 }
 let RadioNum = 0
 let Timer = 0
